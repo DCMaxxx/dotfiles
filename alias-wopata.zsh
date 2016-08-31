@@ -3,6 +3,7 @@ alias woupee='cd ~/Documents/woupee/repo'
 alias legrand='cd ~/Documents/legrand/ios/Legrand\ ecat'
 alias mcs='cd ~/Documents/mcs/repos/MonCoachSommeil'
 alias merck='cd ~/Documents/merck/repo'
+alias worldmix='cd ~/Documents/appworldmix/repo'
 
 # SSH to the CI machine
 alias bamboo='ssh bambooci@bamboo'
