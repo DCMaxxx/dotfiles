@@ -1,9 +1,9 @@
 # Projects folders
-alias -g Woupee='~/Documents/woupee/repo'
-alias -g Legrand='~/Documents/legrand/repo/Legrand\ ecat'
-alias -g Mcs='cd ~/Documents/mcs/repo/MonCoachSommeil'
-alias -g Merck='cd ~/Documents/merck/repo'
-alias -g Appwm='cd ~/Documents/appworldmix/repo'
+alias woupee='~/Documents/woupee/repo'
+alias legrand='~/Documents/legrand/repo/Legrand\ ecat'
+alias mcs='~/Documents/mcs/repo/MonCoachSommeil'
+alias merck='~/Documents/merck/repo'
+alias appwm='~/Documents/appworldmix/repo'
 
 # SSH to the CI machine
 alias bamboo='ssh bambooci@bamboo'
