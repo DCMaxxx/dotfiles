@@ -2,7 +2,7 @@
 alias oprj='open *.xcworkspace && gitup'
 
 # Quits Xcode and GitUp
-alias qprj='killall Xcode ; killall GitUp'
+alias qprj='killall Xcode ; osascript -e "quit app \"GitUp\""'
 
 # Run it in order to fix xcode
 alias xcode_fix='killall Xcode && rm -rf ~/Library/Developer/Xcode/DerivedData ; open /Applications/Xcode.app'

@@ -3,7 +3,7 @@ alias woupee='~/Documents/woupee/repo'
 alias appwm='~/Documents/appworldmix/repo'
 alias euralis='~/Documents/euralis-ios/'
 alias megaselfie='~/Documents/megaselfie/megaselfie/'
-alias mindful='~/Documents/mindful/repo/'
+alias mindful='~/Documents/mindful/repo/Mindful'
 
 # SSH to the CI machine
 alias bamboo='ssh bambooci@panda.local'
