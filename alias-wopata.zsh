@@ -1,9 +1,17 @@
-# Projects folders
-alias woupee='~/Documents/woupee/repo'
-alias appwm='~/Documents/appworldmix/repo'
-alias euralis='~/Documents/euralis-ios/'
-alias megaselfie='~/Documents/megaselfie/megaselfie/'
-alias mindful='~/Documents/mindful/repo/Mindful'
+# Alias to cd to a project's repository
+function cdprj()
+{
+    if [ -z "$1" ]; then
+        echo "usage: cdprj project"
+    else
+        cd ~/"Documents/projects/${1}/repo/"
+    fi
+}
+
+alias woupee='cdprj woupee'
+alias appwm='cdprj appworldmix'
+alias megaselfie='cdprj megaselfie'
+alias mindful='cdprj mindful'
 
 # SSH to the CI machine
 alias bamboo='ssh bambooci@panda.local'
