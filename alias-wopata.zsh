@@ -27,3 +27,7 @@ function istr()
         echo "Neither 'update-localizations.js' nor 'poolstrings.js' exists" && false
     fi
 }
+
+# `bonjour` administator
+alias bonjour='wget -q http://bonjourmadame.fr -O - | grep ".media.tumblr.com/" | grep "img" | grep "alt=" | cut -d\" -f2 | pbcopy'
+alias bonjour_open='bonjour && ~/.bonjour.oascript'
