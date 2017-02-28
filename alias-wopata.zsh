@@ -12,6 +12,7 @@ alias woupee='cdprj woupee'
 alias appwm='cdprj appworldmix'
 alias megaselfie='cdprj megaselfie'
 alias mindful='cdprj mindful'
+alias ystudents='cdprj ystudents'
 
 # SSH to the CI machine
 alias bamboo='ssh bambooci@panda.local'
