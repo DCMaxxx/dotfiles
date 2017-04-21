@@ -1,7 +1,7 @@
 # Sets the keystroke to a much faster rate.
 # Resets by setting the keystroke in Settings/Keyboard
 # See: http://hints.macworld.com/article.php?story=20090823193018149
-KEYSTROKE_RATE_COMMAND="defaults write NSGlobalDomain KeyRepeat -int 0"
+KEYSTROKE_RATE_COMMAND="defaults write NSGlobalDomain KeyRepeat -int 1"
 
 # Sets the mission control animations to a be much faster
 # See: http://osxdaily.com/2012/02/14/speed-up-misson-control-animations-mac-os-x/
