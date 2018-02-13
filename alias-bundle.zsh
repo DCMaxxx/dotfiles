@@ -5,9 +5,6 @@ alias bepi='bundle exec pod install'
 alias bepu='bundle exec pod update'
 alias bepru='bundle exec pod repo update'
 
-alias befb='bundle exec fastlane build'
-alias befd='bundle exec fastlane deploy'
-
 # Installs bundler and the gems in the Gemfile in the .gems directory
 function bilocal()
 {
