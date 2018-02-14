@@ -6,6 +6,6 @@ function clean()
     if [ -z "$1" ]; then
 	      clean '.'
     else
-        find $1 -type f \( \( -name "*~" -or -name ".*~" \) -and \( -not -name "dgph~" -and -not -name "*.swiftdeps~" \) \) -exec rm -fv {} \;
+        find $1 -type f \( \( -name "*~" -or -name ".*~" \) -and \( -not -name "snapshots.data~" -and \( -not -name "dgph~" -and -not -name "*.swiftdeps~" \) \) \) -exec rm -fv {} \;
     fi
 }
