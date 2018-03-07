@@ -13,3 +13,7 @@ function deploy() {
     echo "Cancelled by user."
   fi
 }
+
+alias add_cocoapods='echo gem \"cocoapods\", \"1.4.0\" >> Gemfile'
+alias rm_cocoapods='git checkout Gemfile Gemfile.lock || rm Gemfile Gemfile.lock'
+alias pod_install='add_cocoapods && bepi && rm_cocoapods'
