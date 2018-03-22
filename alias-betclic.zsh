@@ -14,6 +14,11 @@ function deploy() {
   fi
 }
 
-alias add_cocoapods='echo gem \"cocoapods\", \"1.4.0\" >> Gemfile'
-alias rm_cocoapods='git checkout Gemfile Gemfile.lock || rm Gemfile Gemfile.lock'
-alias pod_install='add_cocoapods && bepi && rm_cocoapods'
+function new_branch() {
+  jira=$([ ${1} = "-" ] && echo "NOISSUE" || echo "#IOSSPORT-${1}")
+  name=${2// /_}
+  kind=${3:-feature}
+
+  branch="${kind}/${jira}_MDC_${name}"
+  git checkout -b "${branch}"
+}
