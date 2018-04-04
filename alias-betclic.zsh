@@ -2,7 +2,7 @@ alias repo='cd ~/Documents/Betclic/iOSBetclicSport'
 
 function deploy() {
   regulation="${1:-fr}"
-  branch="`git branchname`"
+  branch="`git rev-parse --abbrev-ref HEAD`"
 
   read -q "CONFIRM?Releasing \"${regulation}\" on branch \"${branch}\". Continue ? (y/n) "
   echo ""
@@ -15,6 +15,10 @@ function deploy() {
 }
 
 function new_branch() {
+  if [ "$#" -eq 0 ]; then
+     echo "usage: new_branch (jira_number|-) branch_name [kind]"
+     return 1 
+  fi
   jira=$([ ${1} = "-" ] && echo "NOISSUE" || echo "#IOSSPORT-${1}")
   name=${2// /_}
   kind=${3:-feature}
