@@ -1,3 +1,3 @@
 alias reload='source ~/.zshrc'
 
-alias omzsh='atom ~/.oh-my-zsh/'
+alias omzsh='atom ~/.oh-my-zsh/custom/'
