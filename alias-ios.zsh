@@ -12,3 +12,8 @@ alias xcode_fix_windows='rm -f ./*.xcworkspace/xcuserdata/*.xcuserdatad/UserInte
 
 # Run it if for some reason, cocoapods takes forever to install
 alias cocoapods_fix='bundle exec pod repo remove master && bundle exec pod setup && bundle exec pod install'
+
+record_simulator() {
+    NAME="${1:-`date`}"
+    xcrun simctl io booted recordVideo "$NAME"
+}
