@@ -20,7 +20,7 @@ function new_branch() {
      echo "usage: new_branch (jira_number|-) branch_name [kind]"
      return 1
   fi
-  jira=$([ ${1} = "-" ] && echo "NOISSUE" || echo "#IOSSPORT-${1}")
+  jira=$([ ${1} = "-" ] && echo "NOISSUE" || echo "#GTBC-${1}")
   name=${2// /_}
   kind=${3:-feature}
 
