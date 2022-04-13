@@ -12,5 +12,5 @@ function git_reset_to_remote()
 
 function git_rebase_onto_last_x_commits()
 {
-	echo git rebase -i --onto "$1" "`git_branchname`~$2"
+	git rebase -i --onto "$1" "`git_branchname`~$2"
 }
