@@ -8,7 +8,8 @@ function deploy() {
   echo ""
 
   if [ ${CONFIRM} = 'y' ]; then
-    build_number=`curl -s https://app.bitrise.io/app/$BITRISE_APP_ID/build/start.json --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"$BITRISE_BUILD_TRIGGER_TOKEN\"},\"build_params\":{\"branch\":\"${branch}\",\"workflow_id\":\"${workflow}\"},\"triggered_by\":\"curl\"}" | grep -Eo '\"build_number\"\:[0-9]+' | cut -d : -f2`
+    echo "This isn't done yet."
+    exit 1;
     echo -n "Done. Build number is #${build_number}. "
     read -q "CONFIRM?Copy build number to clipboard? (y/n) "
     echo ""
@@ -25,10 +26,14 @@ function new_branch() {
      echo "usage: new_branch (jira_number|-) branch_name [kind]"
      return 1
   fi
-  jira=$([ ${1} = "-" ] && echo "NOISSUE" || echo "PGT-${1}")
+  jira=$([ ${1} = "-" ] && echo "NOISSUE" || echo "TIOS-${1}")
   name=${2// /_}
   kind=${3:-feature}
 
-  branch="${kind}/passenger/${jira}_${name}"
+  branch="${kind}/#${jira}_MDC_${name}"
   git checkout -b "${branch}"
+}
+
+function compare_snapshots() {
+  pbpaste | perl -n -e'/"(\/Users\/[^"]+)"/m && system("echo $1 && open $1")'
 }
